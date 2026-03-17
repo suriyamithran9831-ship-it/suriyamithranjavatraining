@@ -1,0 +1,23 @@
+class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello World in Java"); 
+    }
+} import java.util.Scanner;
+
+public class SumOfPrimes {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter n: ");
+        int n = sc.nextInt(), sum = 0, count = 0, num = 2;
+
+        while (count < n) {
+            boolean prime = true;
+            for (int i = 2; i * i <= num; i++)
+                if (num % i == 0) { prime = false; break; }
+            if (prime) { sum += num; count++; }
+            num++;
+        }
+        System.out.println("Sum = " + sum);
+        
+    }
+}
